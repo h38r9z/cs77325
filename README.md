@@ -1,1 +1,26 @@
-# cs77325
+java c
+COM6014
+Fundamental Security Properties and Mechanisms 
+Assignment I (Cryptographic Analysis Task) 
+Deadline for submission via MOLE: Wednesday 11th December 2024 at 15:00 
+Total Marks Available 100 
+Submission format details are given at the end of this question. 
+Question:  Linear Cryptanalysis (100 Marks) 
+A simple 3-round substitution permutation network (SPN) cipher (inspired by the Heys’ Tutorial SPN cipher) is shown in Figure 1.
+The cipher operates on 8-bit blocks. Key mixing is simple bitwise XOR. The 8-bit plaintext block P is XOR-ed bitwise with the 8-bit key K1 before the resulting 8-bit block enters the two first-round S-boxes. The remaining key mixing operations for K2, K3, and K4 are handled similarly. (They are all bitwise XOR operations over 8 bits.)
+A substitution box (S-box) is shown in Figure 2. This S-box is used throughout the cipher shown in Figure 1, i.e., the six S-boxes are identical. The S-box is identical to that given in the Heys’ Tutorial SPN Cipher. 
+The permutation part of the first two rounds is as shown in Figure 1. The final (third) round does not implement any permutation; the outputs from the final round S-boxes are simply XOR-ed bitwise with the key K4 to produce ciphertext C. The permutation is obviously different to that given in the Heys’ Tutorial SPN cipher since the cipher in this assessment operates over 8-bit blocks and that of the Heys’ Tutorial SPN cipher operates over 16-bit blocks.
+A file “Encryptions256-2024-25.txt” has been provided containing the 256 possible plaintext-ciphertext (PC) pairs derived using a specific set of four keys. In each line of the file the plaintext P and corresponding ciphertext C appear as the natural decimal integer interpretations (from 0 to 255) of 8-bit values. For example, the value 129 is the interpretation of the 8 bits 10000001.
+You are required to develop a 2-round linear approximation (i.e., suitably approximating the first two rounds) and use it to recover the final key K4, documenting your efforts in a report. Then you are required similarly to recover the key K3. You are then required to reflect on what you have done and consider an analogous key recovery strategy.
+Answer all question parts below in your report.a)   Develop a suitable 2-round linear approximation for the cipher. You should:i.   state clearly what the 2-round linear approximation is, i.e. give its expression as an equation. The approximation should involve bits of P and bits of U3. Your single approximation must target ALL 8 bits of K4. [5 Marks] ii.   indicate the active S-boxes used in your 2-round approximation and indicate the linear approximation used in 代 写Fundamental Security Properties and Mechanisms Assignment I (Cryptographic Analysis Task)R
+代做程序编程语言each active S-box.    Give the associated biases of each such active S-box approximation and indicate how/from where they were obtained. [8 Marks] iii.   calculate the bias of your 2-round linear approximation and show your calculations.    [5 Marks] iv.   present an annotated copy of Figure 1, summarizing the work above. [2 Marks] v.   justify the choices you have made in constructing your 2-round approximation. [5 Marks]  Note: you should not overcomplicate your answers. You are NOT expected to do any step-by-step algebraic manipulations given in the lecture on linear cryptanalysis or in the Heys’ tutorial (which serve to show why linear cryptanalysis works).b)   Implement linear cryptanalysis to recover K4. Your implementation (code) should contain:  i.   functionality to read in the 256 PC pairs from the provided file. [5 Marks] ii.   a function reverseCK(C, K) that returns a value of U3, given ciphertext C and a key value K as inputs. It should also contain code to verify that this reversal code is correctly implemented. [10 Marks]iii.   functionality to determine, when evaluated using the 256 P-C pairs, how many times your given approximation holds for each possible key guess for K4. [10 Marks] iv.   functionality to rank and display appropriately the counts derived in (iii). [5 Marks] v.   appropriate comments in-line to help the reader understand code. [5 Marks]c)   You should:  i.   run your code and present the results appropriately in your report. [5 Marks] ii.   indicate, based on your results, what is the most likely value for K4 [5 Marks]d)   Assuming the K4 value your approach above has identified is correct, proceed in an analogous fashion to recover K3. You should:i.   indicate the approximation to be used to recover K3, and what its bias is etc. [3 Marks] ii.   implement code to identify a candidate for K3. [12 Marks] iii.   run your code and present results in an analogous fashion, indicating the most likely candidate for K3 [5 Marks]You should be able to reuse much of your previously developed code. You might anticipate the requirements of this question part when you develop your code in part b)   above (but you are not obliged to do so).e)   Above the first key to be recovered was K4.    Explain how you could instead have recovered K1 (or part of it) in an analogous manner. (You are not expected to implement this.) [10 Marks]
+Submission Details. Your report should be in pdf format and submission is online via the COM6014 Blackboard website.    Your report should include your code. 
+
+Figure 1. Simple Very Small SPN Cipher 
+
+
+Figure 2. Specification of the Common S-Box 
+
+
+         
+加QQ：99515681  WX：codinghelp  Email: 99515681@qq.com
